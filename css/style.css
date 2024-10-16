@@ -17,6 +17,9 @@
   --color-dark-beige: #cdb49b;
   --color-chocolate: #866249;
   --color-warm-brown: #deb591;
+
+  /* Font */
+  --font-main: 'Prociono', serif;
 }
 
 /* Common */
@@ -51,9 +54,22 @@ button {
   cursor: pointer;
 }
 
+/* effects */
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Header */
 .header {
-  font-family: 'Prociono', serif;
+  font-family: var(--font-main);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -86,4 +102,40 @@ button {
 .header__menu__item:hover {
   background-color: var(--color-text-contrast);
   border-radius: 2rem;
+}
+
+/* Intro */
+#intro {
+  padding: 4rem;
+}
+.turntable {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary-muted);
+  border: 1px solid var(--color-black);
+  border-radius: 3rem;
+}
+.turntable:hover .turntable__img {
+  animation: turn 0.8s ease;
+}
+.turntable__img {
+  width: 65%;
+  border: 1px solid var(--color-text-contrast);
+  border-radius: 100%;
+}
+.turntable__text {
+  width: 35%;
+  font-family: var(--font-main);
+  font-size: 2rem;
+  line-height: 2.8rem;
+  text-decoration: underline double var(--color-text-contrast) from-font;
+}
+.turntable__text--big {
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
 }
