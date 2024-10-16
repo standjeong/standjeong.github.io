@@ -89,6 +89,10 @@ button {
   font-family: var(--font-title);
   margin: 1.5rem 0;
 }
+.section_subtitle {
+  font-size: 1.8rem;
+  font-family: var(--font-normal);
+}
 
 /* effects */
 @keyframes turn {
@@ -268,3 +272,48 @@ button {
   mask: var(--divider-tilt-right);
   -webkit-mask: var(--divider-tilt-right);
 }
+.skills__wrap {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 4px;
+}
+.skills__box__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.skills__box {
+  font-size: 1.3rem;
+  border: 2px solid var(--color-text);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.skills__icon {
+  font-size: 1.5rem;
+}
+.skills__coding {
+  grid-row: 1 / span 2;
+}
+.tech_stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.8rem;
+}
+.tech_stack__metadata {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.tech_stack__bar {
+  width: 100%;
+  background-color: var(--color-text);
+  border-radius: 1rem;
+}
+.tech_stack__bar__value {
+  height: 8px;
+  background-color: var(--color-accent);
+}
+
+/* My Work */
