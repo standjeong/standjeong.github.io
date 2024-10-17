@@ -23,6 +23,13 @@ document.addEventListener('scroll', () => {
   }
 });
 
+//페이지 아래로 스크롤시 첫 섹션 fade out
+document.addEventListener('scroll', () => {
+  if (window.scrollY < intro.offsetHeight) {
+    intro.style.opacity = 1 - window.scrollY / intro.offsetHeight;
+  }
+});
+
 //모바일 네비게이션 메뉴 토글버튼
 const menuToggleBtn = document.querySelector('.mobile__toggle_btn');
 const headerMenu = document.querySelector('.header__menu');
