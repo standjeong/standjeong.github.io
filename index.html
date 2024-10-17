@@ -183,51 +183,90 @@
       </section>
       <!-- My Work -->
       <section id="work">
-        <div>
-          <h1>My Work</h1>
-          <p>Recent Projects</p>
-          <ul>
+        <div class="work__wrap section_wrap">
+          <h1 class="section_title">My Work</h1>
+          <p class="section_subtitle">
+            Recent Projects <small>— 2024 Edition</small>
+          </p>
+          <ul class="work__categories">
             <li>
-              <button>All<span>4</span></button>
+              <button class="category category__selected">
+                All<span class="category__count">4</span>
+              </button>
             </li>
             <li>
-              <button>Front-end<span>3</span></button>
+              <button class="category">
+                Front-end<span class="category__count">3</span>
+              </button>
             </li>
             <li>
-              <button>Service Planning<span>1</span></button>
+              <button class="category">
+                Service Planning<span class="category__count">1</span>
+              </button>
             </li>
           </ul>
-          <ul>
-            <li>
-              <img src="images/projects/todomate.png" alt="todomate" />
-              <div><a href="">GitHub</a><a href="">Web Site</a></div>
-              <div>
+          <ul class="projects">
+            <li class="project">
+              <div class="project__label">Personal</div>
+              <img
+                class="project__img"
+                src="images/projects/todomate.png"
+                alt="todomate"
+              />
+              <div class="project__links">
+                <a class="project__btn" href="">GitHub</a
+                ><a class="project__btn" href="">Web Site</a>
+              </div>
+              <div class="project__metadata">
                 <h3>Todo Mate</h3>
                 <p>React, JavaScript, HTML(JSX), PostCSS</p>
               </div>
             </li>
-            <li>
-              <img src="images/projects/youtube.png" alt="youtube" />
-              <div><a href="">GitHub</a><a href="">Web Site</a></div>
-              <div>
+            <li class="project">
+              <div class="project__label">Personal</div>
+              <img
+                class="project__img"
+                src="images/projects/youtube.png"
+                alt="youtube"
+              />
+              <div class="project__links">
+                <a class="project__btn" href="">GitHub</a
+                ><a class="project__btn" href="">Web Site</a>
+              </div>
+              <div class="project__metadata">
                 <h3>Youtube Clone Coding</h3>
                 <p>React, JavaScript, HTML(JSX), TailwindCSS</p>
               </div>
             </li>
-            <li>
-              <img src="images/projects/wiblack.png" alt="wiblack" />
-              <div><a href="">GitHub</a><a href="">Web Site</a></div>
-              <div>
-                <h3>wiblack</h3>
+            <li class="project">
+              <div class="project__label">Personal</div>
+              <img
+                class="project__img"
+                src="images/projects/wiblack.png"
+                alt="wiblack"
+              />
+              <div class="project__links">
+                <a class="project__btn" href="">GitHub</a
+                ><a class="project__btn" href="">Web Site</a>
+              </div>
+              <div class="project__metadata">
+                <h3>WiBlack Shop</h3>
                 <p>React, JavaScript, HTML(JSX), TailwindCSS</p>
               </div>
             </li>
-            <li>
-              <img src="images/projects/docker.png" alt="docker" />
-              <div><a href="">Link</a></div>
-              <div>
-                <h3>wiblack</h3>
-                <p>Figma, FigJam</p>
+            <li class="project">
+              <div class="project__label">Team</div>
+              <img
+                class="project__img"
+                src="images/projects/docker.png"
+                alt="docker"
+              />
+              <div class="project__links">
+                <a class="project__btn" href="">Link</a>
+              </div>
+              <div class="project__metadata">
+                <h3>DOCKER</h3>
+                <p>Figma, Figjam</p>
               </div>
             </li>
           </ul>
