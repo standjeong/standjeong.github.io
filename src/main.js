@@ -11,3 +11,14 @@ document.addEventListener('scroll', () => {
     header.classList.remove('dark');
   }
 });
+
+//페이지 아래로 스크롤시 화살표 버튼 나타나기
+const intro = document.querySelector('#intro');
+const arrowUpBtn = document.querySelector('.arrow_up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > intro.offsetHeight / 2) {
+    arrowUpBtn.classList.add('visible');
+  } else {
+    arrowUpBtn.classList.remove('visible');
+  }
+});
