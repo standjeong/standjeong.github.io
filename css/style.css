@@ -17,12 +17,13 @@
   /* App Color */
   --color-text: var(--color-black);
   --color-text-contrast: var(--color-white);
-  --color-primary: var(--color-beige);
   --color-accent: var(--color-orange);
+  --color-primary: var(--color-beige);
   --color-primary-muted: var(--color-dark-beige);
   --color-primary-dark: var(--color-chocolate);
   --color-primary-light: var(--color-warm-brown);
   --color-primary-white: antiquewhite;
+  --color-secondary: var(--color-purple);
 
   /* Color */
   --color-black: #2b1414;
@@ -33,6 +34,7 @@
   --color-dark-beige: #cdb49b;
   --color-chocolate: #866249;
   --color-warm-brown: #deb591;
+  --color-purple: #b9a4cb;
 
   /* Font */
   --font-main: 'Prociono', serif;
@@ -129,6 +131,9 @@ button {
 
 /* Header */
 .header {
+  z-index: 9;
+  position: sticky;
+  top: 0;
   font-family: var(--font-main);
   display: flex;
   align-items: center;
@@ -137,7 +142,13 @@ button {
   height: 80px;
   padding: 10px 16px;
   border-bottom: 1px solid var(--color-black);
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
+.header.dark {
+  background-color: var(--color-secondary);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -534,6 +545,7 @@ button {
 
 /* Arrow Up Button */
 .arrow_up {
+  z-index: 1;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -556,6 +568,7 @@ button {
     /* align-items: start; */
   }
   .header__menu {
+    display: none;
     position: absolute;
     top: 80px;
     left: 0;
