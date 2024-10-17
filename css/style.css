@@ -22,6 +22,7 @@
   --color-primary-muted: var(--color-dark-beige);
   --color-primary-dark: var(--color-chocolate);
   --color-primary-light: var(--color-warm-brown);
+  --color-primary-white: antiquewhite;
 
   /* Color */
   --color-black: #2b1414;
@@ -102,11 +103,26 @@ button {
   0% {
     transform: rotate(0deg);
   }
+  5% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
   30% {
-    transform: rotate(-30deg);
+    transform: rotate(-5deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes changeBg {
+  from {
+    background-size: 1.2rem;
+  }
+  to {
+    background-size: 4rem;
   }
 }
 
@@ -150,7 +166,14 @@ button {
 /* Intro */
 #intro {
   padding: 4rem;
+  margin: 4rem auto;
+  max-width: var(--size-max-width);
+  background-size: 4rem;
+  background-repeat: space;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="%23808"><path d="M480 240A240 240 0 0 1 240 0 240 240 0 0 1 0 240a240 240 0 0 1 240 240 240 240 0 0 1 240-240Z"></path></svg>');
+  animation: changeBg 0.4s ease-in-out alternate;
 }
+
 .turntable {
   max-width: 800px;
   margin: 0 auto;
@@ -161,9 +184,13 @@ button {
   background-color: var(--color-primary-muted);
   border: 1px solid var(--color-black);
   border-radius: 3rem;
+  cursor: grabbing;
+  box-shadow: 10px 10px 0px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 0px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px -3px rgba(0, 0, 0, 0.75);
 }
 .turntable:hover .turntable__img {
-  animation: turn 0.8s ease;
+  animation: turn 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .turntable__img {
   width: 65%;
@@ -181,7 +208,12 @@ button {
 .turntable__text--big {
   display: block;
   font-size: 2.5rem;
+  font-weight: normal;
   margin-bottom: 8px;
+}
+.turntable__text--mark {
+  background-color: transparent;
+  color: var(--color-primary-white);
 }
 
 /* About */
@@ -392,12 +424,15 @@ button {
 .project__label {
   font-family: var(--font-title);
   position: absolute;
-  top: 8px;
+  top: -1px;
+  right: -2px;
   padding: 0.2rem 1rem;
-  background-color: var(--color-accent);
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  border: 2px solid var(--color-text);
+  color: var(--color-text-contrast);
+  background-color: var(--color-text);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  /* border: 2px solid var(--color-text); */
+  box-shadow: 1px 2px 0px 0px;
   border-left: none;
 }
 .project__img {
@@ -438,6 +473,10 @@ button {
   padding: 0.5rem 1rem;
   background-color: var(--color-text-contrast);
   flex: 1;
+  transition: background-color 0.3s ease;
+}
+.project__btn:hover {
+  background-color: #ffcf33;
 }
 
 /* Contact */
