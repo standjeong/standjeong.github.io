@@ -5,7 +5,7 @@ const header = document.querySelector('.header');
 const headerHeight = header.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
-  if (window.scrollY > headerHeight) {
+  if (window.scrollY > headerHeight && window.innerWidth > 768) {
     header.classList.add('dark');
   } else {
     header.classList.remove('dark');
@@ -20,5 +20,19 @@ document.addEventListener('scroll', () => {
     arrowUpBtn.classList.add('visible');
   } else {
     arrowUpBtn.classList.remove('visible');
+  }
+});
+
+//모바일 네비게이션 메뉴 토글버튼
+const menuToggleBtn = document.querySelector('.mobile__toggle_btn');
+const headerMenu = document.querySelector('.header__menu');
+
+menuToggleBtn.addEventListener('click', (e) => {
+  headerMenu.classList.toggle('open');
+  e.stopPropagation();
+});
+document.addEventListener('click', (e) => {
+  if (e.target !== menuToggleBtn) {
+    headerMenu.classList.remove('open');
   }
 });
