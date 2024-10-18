@@ -200,23 +200,24 @@
           </p>
           <ul class="work__categories">
             <li>
-              <button class="category category__selected">
+              <button class="category active" data-category="all">
                 All<span class="category__count">4</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="frontend">
                 Front-end<span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="planning">
                 Service Planning<span class="category__count">1</span>
               </button>
             </li>
           </ul>
+
           <ul class="projects">
-            <li class="project">
+            <li class="project" data-category="frontend">
               <div class="project__label">Personal</div>
               <img
                 class="project__img"
@@ -241,7 +242,29 @@
                 <p>React, JavaScript, HTML(JSX), PostCSS</p>
               </div>
             </li>
-            <li class="project">
+
+            <li class="project" data-category="planning">
+              <div class="project__label">Team</div>
+              <img
+                class="project__img"
+                src="images/projects/docker.png"
+                alt="docker"
+              />
+              <div class="project__links">
+                <a
+                  class="project__btn"
+                  target="_blank"
+                  href="images/projects/DOCKER_storyboard.pdf"
+                  >Link</a
+                >
+              </div>
+              <div class="project__metadata">
+                <h3>DOCKER</h3>
+                <p>Figma, Figjam</p>
+              </div>
+            </li>
+
+            <li class="project" data-category="frontend">
               <div class="project__label">Personal</div>
               <img
                 class="project__img"
@@ -266,7 +289,7 @@
                 <p>React, JavaScript, HTML(JSX), TailwindCSS</p>
               </div>
             </li>
-            <li class="project">
+            <li class="project" data-category="frontend">
               <div class="project__label">Personal</div>
               <img
                 class="project__img"
@@ -289,26 +312,6 @@
               <div class="project__metadata">
                 <h3>WiBlack Shop</h3>
                 <p>React, JavaScript, HTML(JSX), TailwindCSS</p>
-              </div>
-            </li>
-            <li class="project">
-              <div class="project__label">Team</div>
-              <img
-                class="project__img"
-                src="images/projects/docker.png"
-                alt="docker"
-              />
-              <div class="project__links">
-                <a
-                  class="project__btn"
-                  target="_blank"
-                  href="images/projects/DOCKER_storyboard.pdf"
-                  >Link</a
-                >
-              </div>
-              <div class="project__metadata">
-                <h3>DOCKER</h3>
-                <p>Figma, Figjam</p>
               </div>
             </li>
           </ul>

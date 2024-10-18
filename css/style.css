@@ -422,14 +422,19 @@ button {
   transition: all 0.3s ease;
 }
 .category:hover .category__count,
-.category__selected .category__count {
+.category.active .category__count {
   opacity: 1;
   top: -6px;
 }
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  transition: all 0.3s ease;
+}
+.projects.pre_effect {
+  transform: translateY(2px) scale(0.98);
 }
 .project {
   position: relative;
@@ -437,6 +442,7 @@ button {
   border-radius: 1rem;
   overflow: hidden;
 }
+
 .project__label {
   font-family: var(--font-title);
   position: absolute;
