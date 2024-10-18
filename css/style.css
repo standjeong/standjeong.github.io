@@ -129,6 +129,18 @@ button {
   }
 }
 
+@keyframes stretching {
+  0% {
+    transform: skew(-10deg, -5deg) scaleX(1);
+  }
+  30% {
+    transform: skew(-20deg, -10deg) scaleX(1.2);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 /* Header */
 .header {
   z-index: 9;
@@ -585,11 +597,11 @@ button {
     display: block;
     order: 2;
     font-size: 2rem;
-    transition: all 0.3s ease-in-out;
   }
   .mobile__toggle_btn:hover {
-    transform: skew(-20deg, -10deg) scaleX(1.2);
+    animation: stretching 1s ease;
   }
+
   .header__menu {
     display: none;
     position: absolute;
