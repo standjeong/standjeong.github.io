@@ -17,7 +17,7 @@ categories.addEventListener('click', (e) => {
 });
 
 function showActiveCategoryCount(clickedButton) {
-  const prevActiveButton = document.querySelector('.active');
+  const prevActiveButton = document.querySelector('.active.category');
   prevActiveButton.classList.remove('active');
   clickedButton.classList.add('active');
 }
