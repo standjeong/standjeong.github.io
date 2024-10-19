@@ -677,6 +677,12 @@ button {
 }
 
 @media screen and (max-width: 520px) {
+  .work__categories {
+    flex-direction: column;
+  }
+  .category {
+    width: 100%;
+  }
   .project__links {
     flex-direction: column;
   }
