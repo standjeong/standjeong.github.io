@@ -45,6 +45,7 @@
     <!-- JavaScript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/observerSection.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -55,11 +56,21 @@
       </a>
       <nav>
         <ul class="header__menu">
-          <li><a class="header__menu__item" href="#intro">Intro</a></li>
-          <li><a class="header__menu__item" href="#about">About</a></li>
-          <li><a class="header__menu__item" href="#skills">Skills</a></li>
-          <li><a class="header__menu__item" href="#work">My Work</a></li>
-          <li><a class="header__menu__item" href="#contact">Contact</a></li>
+          <li>
+            <a class="header__menu__item active" href="#intro">Intro</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#about">About</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#skills">Skills</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#work">My Work</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
       <button class="mobile__toggle_btn" aria-label="navigation menu toggle">
@@ -70,19 +81,21 @@
     <main>
       <!-- Intro -->
       <section id="intro">
-        <div class="turntable">
-          <img
-            class="turntable__img"
-            src="images/profile.png"
-            alt="Dajeong's profile"
-          />
-          <p class="turntable__text">
-            <b class="turntable__text--big"> Hello, </b>
-            I'm a developer who mixes
-            <mark class="turntable__text--mark">design</mark> and
-            <mark class="turntable__text--mark">front-end skills</mark> to
-            enhance user experience.
-          </p>
+        <div class="intro_wrap">
+          <div class="turntable">
+            <img
+              class="turntable__img"
+              src="images/profile.png"
+              alt="Dajeong's profile"
+            />
+            <p class="turntable__text">
+              <b class="turntable__text--big"> Hello, </b>
+              I'm a developer who mixes
+              <mark class="turntable__text--mark">design</mark> and
+              <mark class="turntable__text--mark">front-end skills</mark> to
+              enhance user experience.
+            </p>
+          </div>
         </div>
       </section>
       <!-- About -->
