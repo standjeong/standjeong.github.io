@@ -686,4 +686,9 @@ button {
   .project__links {
     flex-direction: column;
   }
+  .project__metadata {
+    font-size: 1rem;
+    padding: 0;
+    gap: 0.3rem;
+  }
 }
