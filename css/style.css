@@ -305,6 +305,10 @@ button {
   text-align: left;
   margin: 1rem auto;
 }
+.about__content--mark {
+  background-color: #ffcf33;
+  color: var(--color-text);
+}
 .about__story {
   width: 70%;
   font-size: 1.5rem;
